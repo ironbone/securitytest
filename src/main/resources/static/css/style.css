@@ -1,0 +1,9 @@
+@charset "UTF-8";
+.hello{
+	color: green;
+}
+
+.error{
+	color: red;
+	font-size: 0.5em;
+}

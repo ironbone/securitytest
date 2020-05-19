@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org/">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link th:href="@{/css/style.css}" rel="stylesheet">
+</head>
+<body>
+	<h1 class="hello">Public area</h1>
+	<h2>
+		<span th:if="${logged}">You are logged as 
+			<span th:text="${username}"></span>
+		</span> 
+		<span th:unless="${logged}">You are not logged in</span>
+	</h2>
+	<div>
+		<div>
+			<a th:href="@{/user/login}" th:text="Login"></a>
+		</div>
+		<a th:href="@{/admin}" th:text="'Admin Area'"></a>
+	</div>
+	<div>
+		<a th:href="@{/restricted}" th:text="'Restricted Area'"></a>
+	</div>
+	<div>
+		<a th:href="@{/user/logout}" th:text="Logout"></a>
+	</div>
+</body>
+</html>
